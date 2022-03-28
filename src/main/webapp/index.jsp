@@ -36,7 +36,7 @@
             <%--            %>--%>
             <%--            <% HashMap<Integer, Note> notes = (HashMap<Integer, Note>) request.getAttribute("notes"); %>--%>
             <c:forEach var="note" items="${notes}">
-                <li><a href="/note?key=${note.key}">Note ${note.key} - ${note.value}</a></li>
+                <li class="notelink"><a href="/note.html?key=${note.key}">${note.value}</a></li>
             </c:forEach>
         </ul>
     </div>

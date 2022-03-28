@@ -48,3 +48,11 @@ a {
 .view {
     background: #DA4167;
 }
+
+.notelink {
+    font-size: 2rem;
+}
+
+.notelink:hover {
+    color: #832161;
+}

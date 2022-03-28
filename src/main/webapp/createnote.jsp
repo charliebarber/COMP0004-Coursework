@@ -8,6 +8,7 @@
 <div class="container">
     <h1>Create a new note</h1>
     <form method="post" action="/createnote.html">
+        <input type="text" name="label" placeholder="Label" style="min-width: 32rem;">
         <input type="text" name="text" placeholder="Enter text here" style="min-width: 32rem; min-height: 16rem;">
         <input type="submit" value="Create note">
     </form>

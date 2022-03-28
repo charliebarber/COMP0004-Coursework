@@ -17,10 +17,10 @@ public class HomeServlet extends HttpServlet {
         // Code to use the model to process something would go here.
         System.out.println("MODEL CAN PRINT");
         Model model = ModelFactory.getModel();
-        NoteIndex index = model.getIndex();
+        NoteIndex noteindex = model.getIndex();
 
         // Then forward to JSP.
-        request.setAttribute("notes", index.getStringIndex());
+        request.setAttribute("notes", noteindex.getLabelIndex());
 
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/index.jsp");

@@ -26,9 +26,15 @@ public class NoteIndex {
         return this.count;
     }
 
-    public HashMap<Integer, String> getStringIndex() {
-        HashMap<Integer, String> stringIndex = new HashMap<>();
-        this.index.forEach((key, val) -> stringIndex.put(key, val.getLabel()));
-        return stringIndex;
+    public HashMap<Integer, String> getLabelIndex() {
+        HashMap<Integer, String> labelIndex = new HashMap<>();
+        this.index.forEach((key, val) -> labelIndex.put(key, val.getLabel()));
+        return labelIndex;
     }
+
+    //    public HashMap<Integer, String> getStringIndex() {
+//        HashMap<Integer, String> stringIndex = new HashMap<>();
+//        this.index.forEach((key, val) -> stringIndex.put(key, val.getLabel()));
+//        return stringIndex;
+//    }
 }

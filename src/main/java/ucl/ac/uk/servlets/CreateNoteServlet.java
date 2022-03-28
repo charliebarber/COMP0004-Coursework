@@ -19,7 +19,7 @@ public class CreateNoteServlet extends HttpServlet {
 
         Model model = ModelFactory.getModel();
         NoteIndex index = model.getIndex();
-        BasicNote basicnote = new BasicNote(request.getParameter("text"));
+        BasicNote basicnote = new BasicNote(request.getParameter("label"), request.getParameter("text"));
         index.add(basicnote);
         System.out.println("RETRIEVED" + index.get(1).getLabel());
         // Then forward to JSP.
