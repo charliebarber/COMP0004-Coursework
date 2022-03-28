@@ -1,0 +1,50 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 10fr 90fr;
+    margin: 0;
+    background: #832161;
+}
+
+.header {
+    background: #000000;
+    color: white;
+    padding: 1rem;
+}
+
+.header h1 {
+    margin-left: 2rem;
+    font-weight: 900;
+    font-size: 2.5rem;
+    place-self: center;
+    justify-self: center;
+}
+
+.container {
+    padding: 2rem;
+    background: #F0EFF4;
+    margin: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.buttonlink {
+    background: #3D2645;
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+}
+
+.view {
+    background: #DA4167;
+}

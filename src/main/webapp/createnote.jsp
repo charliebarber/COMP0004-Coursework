@@ -8,10 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Notes app</title>
+    <%@include file="meta.jsp"%>
 </head>
 <body>
-<h1>Create note</h1>
+<%@include file="header.html"%>
+<div class="container">
+    <h1>Create a new note</h1>
+    <form>
+        <input type="text">
+    </form>
+</div>
 
 </body>
 </html>

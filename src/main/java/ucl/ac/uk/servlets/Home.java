@@ -5,7 +5,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/")
+@WebServlet("/index.html")
 public class Home extends HttpServlet
 {
     @Override

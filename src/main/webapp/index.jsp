@@ -8,10 +8,26 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Notes app</title>
+    <%@include file="meta.jsp"%>
 </head>
 <body>
-<h1>Notes app</h1>
-<button>Create note</button>
+<%@include file="header.html"%>
+<div class="container">
+    <div>
+        <a href="/newnote.html" class="buttonlink">Create a new note</a>
+    </div>
+
+    <div>
+        <h4>View mode</h4>
+        <a href="/" class="buttonlink view">Sorted order</a>
+        <a href="/" class="buttonlink view">Order added</a>
+        <a href="/" class="buttonlink view">Summary</a>
+        <a href="/" class="buttonlink view">Full note</a>
+    </div>
+
+    <div>
+        <h2>Your notes</h2>
+    </div>
+</div>
 </body>
 </html>

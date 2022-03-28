@@ -5,7 +5,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/createnote.html")
+@WebServlet("/newnote.html")
 public class CreateNote extends HttpServlet
 {
     @Override
