@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 @WebServlet("/newnote.html")
-public class CreateNote extends HttpServlet
+public class NewNoteServlet extends HttpServlet
 {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)

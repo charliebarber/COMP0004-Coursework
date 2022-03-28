@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 @WebServlet("/index.html")
-public class Home extends HttpServlet
+public class HomeServlet extends HttpServlet
 {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
