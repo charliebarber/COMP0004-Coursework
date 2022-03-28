@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
 
-  <display-name>Hello World</display-name>
+  <display-name>Notes app</display-name>
   <description>
-    Hello World
+    Simple Java web app to create and store notes
   </description>
 
 </web-app>

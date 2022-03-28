@@ -26,7 +26,6 @@ public class HelloWorldServlet extends HttpServlet
       out.println("<hr>");
       out.println("<p>Today's date is: " + formatter.format(date) + "</p>");
       out.println("<hr>");
-      out.println("<a href='index.html'>Back to the default index.html</a>");
       out.println("</body></html>");
     }
   }
