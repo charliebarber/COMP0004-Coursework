@@ -1,9 +1,13 @@
 package ucl.ac.uk.model;
 
 public class Model {
-    private DataModel dataModel;
+    private NoteIndex index;
 
-    public DataModel getDataModel() {
-        return dataModel;
+    public Model() {
+        this.index = new NoteIndex();
+    }
+
+    public NoteIndex getIndex() {
+        return index;
     }
 }

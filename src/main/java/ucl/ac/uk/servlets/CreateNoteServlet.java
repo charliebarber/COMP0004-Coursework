@@ -3,25 +3,26 @@ package ucl.ac.uk.servlets;
 import ucl.ac.uk.model.Model;
 import ucl.ac.uk.model.ModelFactory;
 import ucl.ac.uk.model.NoteIndex;
+import ucl.ac.uk.model.note.BasicNote;
 
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/index.html")
-public class HomeServlet extends HttpServlet {
+@WebServlet("/createnote.html")
+public class CreateNoteServlet extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         // Code to use the model to process something would go here.
-        System.out.println("MODEL CAN PRINT");
+
         Model model = ModelFactory.getModel();
         NoteIndex index = model.getIndex();
-
+        BasicNote basicnote = new BasicNote(request.getParameter("text"));
+        index.add(basicnote);
+        System.out.println("RETRIEVED" + index.get(1).getLabel());
         // Then forward to JSP.
-        request.setAttribute("notes", index.getStringIndex());
-
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/index.jsp");
         dispatch.forward(request, response);

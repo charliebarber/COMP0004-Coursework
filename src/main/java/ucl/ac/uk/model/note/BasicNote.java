@@ -5,7 +5,7 @@ public class BasicNote implements Note {
     private String type = "basic";
     private String text;
 
-    public BasicNote(String text, Integer id) {
+    public BasicNote(String text) {
         this.text = text;
     }
 

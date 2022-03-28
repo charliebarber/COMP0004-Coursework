@@ -1,21 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: charliebarber
-  Date: 28/03/2022
-  Time: 09:59
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <%@include file="meta.jsp"%>
+    <%@include file="meta.jsp" %>
 </head>
 <body>
-<%@include file="header.html"%>
+<%@include file="header.html" %>
 <div class="container">
     <h1>Create a new note</h1>
-    <form>
-        <input type="text">
+    <form method="post" action="/createnote.html">
+        <input type="text" name="text" placeholder="Enter text here" style="min-width: 32rem; min-height: 16rem;">
+        <input type="submit" value="Create note">
     </form>
 </div>
 
