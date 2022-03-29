@@ -26,6 +26,12 @@ public class NoteIndex {
         index.remove(key);
     }
 
+    public void updateContents(Integer key, String contents) {
+        Note note = index.get(key);
+        note.
+                index.put(key, contents);
+    }
+
     public Integer getCount() {
         return this.count;
     }

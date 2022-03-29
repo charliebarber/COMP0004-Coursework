@@ -15,6 +15,20 @@
         <p>
             <%=note.getContent()%>
         </p>
+
+        <%
+            String requestKey = (String) request.getAttribute("key");
+//            out.println("<form method='post' action='/deletenote.html?key=" + requestKey + "' >");
+        %>
+        <input type="submit" value="Delete note">
+        </form>
+
+        <%
+            out.println("<form method='post' action='/editnote.html?key=" + requestKey + "' >");
+        %>
+        <input type="text" name="contents" title="Edit note content" style="min-width: 32rem; min-height: 16rem;">
+        <input type="submit" value="Edit note content">
+        </form>
     </div>
 </div>
 </body>

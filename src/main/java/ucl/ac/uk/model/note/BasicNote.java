@@ -24,4 +24,12 @@ public class BasicNote implements Note {
     public String getType() {
         return type;
     }
+
+    public void updateContent(String newContent) {
+        this.text = newContent;
+    }
+
+    public void updateLabel(String newLabel) {
+        this.label = newLabel;
+    }
 }

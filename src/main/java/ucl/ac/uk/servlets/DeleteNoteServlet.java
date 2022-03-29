@@ -9,22 +9,22 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/note.html")
-public class NoteServlet extends HttpServlet {
+@WebServlet("/deletenote.html")
+public class DeleteNoteServlet extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         // Code to use the model to process something would go here.
         Model model = ModelFactory.getModel();
         NoteIndex index = model.getIndex();
         String key = request.getParameter("key");
+        index.delete(Integer.valueOf(key));
 
         // Then forward to JSP.
-        request.setAttribute("note", index.get(Integer.valueOf(key)));
-        request.setAttribute("key", key);
 
         ServletContext context = getServletContext();
-        RequestDispatcher dispatch = context.getRequestDispatcher("/note.jsp");
+        request.setAttribute("msg", "Note deleted successfully");
+        RequestDispatcher dispatch = context.getRequestDispatcher("/message.jsp");
         dispatch.forward(request, response);
     }
 }
