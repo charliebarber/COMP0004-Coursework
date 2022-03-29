@@ -7,29 +7,37 @@
 <body>
 <%@include file="header.html" %>
 <div class="container">
-    <div>
-        <% Note note = (Note) request.getAttribute("note"); %>
-        <h1>
-            <%=note.getLabel()%>
-        </h1>
-        <p>
-            <%=note.getContent()%>
-        </p>
+    <% Note note = (Note) request.getAttribute("note"); %>
+    <h1>
+        <%=note.getLabel()%>
+    </h1>
+    <p>
+        <%=note.getContent()%>
+    </p>
 
-        <%
-            String requestKey = (String) request.getAttribute("key");
+    <%
+        String requestKey = (String) request.getAttribute("key");
 //            out.println("<form method='post' action='/deletenote.html?key=" + requestKey + "' >");
-        %>
-        <input type="submit" value="Delete note">
-        </form>
+    %>
+    <input type="submit" value="Delete note">
+    </form>
 
-        <%
-            out.println("<form method='post' action='/editnote.html?key=" + requestKey + "' >");
-        %>
-        <input type="text" name="contents" title="Edit note content" style="min-width: 32rem; min-height: 16rem;">
-        <input type="submit" value="Edit note content">
-        </form>
-    </div>
+    <h3>Edit content</h3>
+    <%
+        out.println("<form method='post' action='/editnote.html?key=" + requestKey + "&type=content'>");
+    %>
+    <input type="text" name="contents" title="Edit note content" style="min-width: 32rem; min-height: 8rem;">
+    <input type="submit" value="Edit note content">
+    </form>
+
+    <h3>Edit label</h3>
+    <%
+        out.println("<form method='post' action='/editnote.html?key=" + requestKey + "&type=label'>");
+    %>
+    <input type="text" name="label" title="Edit note label" style="min-width: 32rem; min-height: 2rem;">
+    <input type="submit" value="Edit note Label">
+    </form>
+
 </div>
 </body>
 </html>

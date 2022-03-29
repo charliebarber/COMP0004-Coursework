@@ -28,8 +28,12 @@ public class NoteIndex {
 
     public void updateContents(Integer key, String contents) {
         Note note = index.get(key);
-        note.
-                index.put(key, contents);
+        note.setContent(contents);
+    }
+    
+    public void updateLabel(Integer key, String label) {
+        Note note = index.get(key);
+        note.setLabel(label);
     }
 
     public Integer getCount() {

@@ -9,3 +9,4 @@ ucl/ac/uk/servlets/NoteServlet.class
 ucl/ac/uk/servlets/CreateNoteServlet.class
 ucl/ac/uk/model/note/Note.class
 ucl/ac/uk/model/NoteIndex.class
+ucl/ac/uk/servlets/EditNoteServlet.class

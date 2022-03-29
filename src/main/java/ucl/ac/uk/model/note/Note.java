@@ -8,7 +8,7 @@ public interface Note {
 
     String getType();
 
-    void updateContent();
+    void setContent(String contents);
 
-    void updateLabel();
+    void setLabel(String label);
 }

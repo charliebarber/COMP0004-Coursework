@@ -25,11 +25,13 @@ public class BasicNote implements Note {
         return type;
     }
 
-    public void updateContent(String newContent) {
-        this.text = newContent;
+    @Override
+    public void setContent(String contents) {
+        this.text = contents;
     }
 
-    public void updateLabel(String newLabel) {
-        this.label = newLabel;
+    @Override
+    public void setLabel(String label) {
+        this.label = label;
     }
 }
