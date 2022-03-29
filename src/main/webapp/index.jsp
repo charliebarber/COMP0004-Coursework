@@ -20,11 +20,11 @@
     </div>
 
     <div>
-        <h4>View mode</h4>
-        <a href="/" class="buttonlink view">Sorted order</a>
-        <a href="/" class="buttonlink view">Order added</a>
-        <a href="/" class="buttonlink view">Summary</a>
-        <a href="/" class="buttonlink view">Full note</a>
+        <h4>
+            View mode - <%=request.getAttribute("viewmode")%>
+        </h4>
+        <a href="/index.html?viewmode=orderAdded" class="buttonlink view">Order added</a>
+        <a href="/index.html?viewmode=sorted" class="buttonlink view">Sorted order</a>
     </div>
 
     <div>
