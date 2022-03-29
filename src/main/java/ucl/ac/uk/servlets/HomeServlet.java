@@ -15,7 +15,6 @@ public class HomeServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         // Code to use the model to process something would go here.
-        System.out.println("MODEL CAN PRINT");
         Model model = ModelFactory.getModel();
         NoteIndex noteindex = model.getIndex();
 

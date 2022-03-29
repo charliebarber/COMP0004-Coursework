@@ -7,7 +7,8 @@
 <body>
 <%@include file="header.html" %>
 <div class="container">
-    <h1>Note created</h1>
+    <h1><%=request.getAttribute("msg")%>
+    </h1>
 </div>
 </body>
 </html>

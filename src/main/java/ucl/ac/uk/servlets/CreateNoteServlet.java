@@ -23,7 +23,8 @@ public class CreateNoteServlet extends HttpServlet {
         index.add(basicnote);
         // Then forward to JSP.
         ServletContext context = getServletContext();
-        RequestDispatcher dispatch = context.getRequestDispatcher("/created.jsp");
+        request.setAttribute("msg", "Note created");
+        RequestDispatcher dispatch = context.getRequestDispatcher("/message.jsp");
         dispatch.forward(request, response);
     }
 }

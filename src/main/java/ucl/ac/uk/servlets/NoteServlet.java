@@ -26,4 +26,20 @@ public class NoteServlet extends HttpServlet {
         RequestDispatcher dispatch = context.getRequestDispatcher("/note.jsp");
         dispatch.forward(request, response);
     }
+
+    @Override
+    public void doDelete(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+        // Code to use the model to process something would go here.
+        Model model = ModelFactory.getModel();
+        NoteIndex index = model.getIndex();
+        String key = request.getParameter("key");
+
+        // Then forward to JSP.
+        request.setAttribute("note", index.get(Integer.valueOf(key)));
+
+        ServletContext context = getServletContext();
+        RequestDispatcher dispatch = context.getRequestDispatcher("/message.jsp");
+        dispatch.forward(request, response);
+    }
 }

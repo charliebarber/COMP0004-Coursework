@@ -22,6 +22,10 @@ public class NoteIndex {
         return index.get(key);
     }
 
+    public void delete(Integer key) {
+        index.remove(key);
+    }
+
     public Integer getCount() {
         return this.count;
     }
