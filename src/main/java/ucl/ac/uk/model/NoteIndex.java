@@ -2,6 +2,7 @@ package ucl.ac.uk.model;
 
 import ucl.ac.uk.model.note.Note;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -55,6 +56,17 @@ public class NoteIndex {
         this.index.forEach((key, note) -> sortedIndex.add(new IndexNode(key, note)));
         Collections.sort(sortedIndex);
         return sortedIndex;
+    }
+
+    public ArrayList<IndexNode> search(String query) {
+        ArrayList<IndexNode> results = new ArrayList<>();
+        this.index.forEach((key, note) -> {
+            if (note.getLabel().contains(query) || note.getContent().contains(query)) {
+                results.add(new IndexNode(key, note));
+            }
+        });
+
+        return results;
     }
 
     //    public HashMap<Integer, String> getStringIndex() {

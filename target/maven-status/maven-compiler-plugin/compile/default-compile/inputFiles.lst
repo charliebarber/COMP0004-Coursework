@@ -2,6 +2,7 @@
 /Users/charliebarber/code/java/COMP0004Coursework/src/main/java/ucl/ac/uk/servlets/NoteServlet.java
 /Users/charliebarber/code/java/COMP0004Coursework/src/main/java/ucl/ac/uk/servlets/HomeServlet.java
 /Users/charliebarber/code/java/COMP0004Coursework/src/main/java/ucl/ac/uk/model/note/Note.java
+/Users/charliebarber/code/java/COMP0004Coursework/src/main/java/ucl/ac/uk/servlets/SearchServlet.java
 /Users/charliebarber/code/java/COMP0004Coursework/src/main/java/ucl/ac/uk/model/NoteIndex.java
 /Users/charliebarber/code/java/COMP0004Coursework/src/main/java/ucl/ac/uk/model/IndexNode.java
 /Users/charliebarber/code/java/COMP0004Coursework/src/main/java/ucl/ac/uk/model/ModelFactory.java

@@ -20,6 +20,14 @@
     </div>
 
     <div>
+        <form method="post" action="/search.html">
+            <%--            <label for="query">Search notes</label>--%>
+            <input type="text" name="query">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div>
         <h4>
             View mode - <%=request.getAttribute("viewmode")%>
         </h4>
