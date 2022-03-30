@@ -1,7 +1,9 @@
 package ucl.ac.uk.model;
 
+import ucl.ac.uk.file.NoteWriter;
 import ucl.ac.uk.model.note.Note;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,9 +17,11 @@ public class NoteIndex {
         this.index = new HashMap<>();
     }
 
-    public void add(Note note) {
+    public void add(Note note) throws IOException {
         this.count += 1;
         this.index.put(count, note);
+        NoteWriter writer = new NoteWriter("index.csv");
+        writer.writeNote(count, note);
     }
 
     public Note get(Integer key) {
