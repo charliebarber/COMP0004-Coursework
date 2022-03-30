@@ -11,9 +11,12 @@
     <h1>
         <%=note.getLabel()%>
     </h1>
-    <p>
-        <%=note.getContent()%>
-    </p>
+    <% if (note.getType().equals("url")) {
+        out.println("<a href='" + note.getContent() + "' style='all: initial'> " + note.getContent() + " </a> ");
+    } else {
+        out.println("<p>" + note.getContent() + "</p>");
+    }
+    %>
 
     <%
         String requestKey = (String) request.getAttribute("key");

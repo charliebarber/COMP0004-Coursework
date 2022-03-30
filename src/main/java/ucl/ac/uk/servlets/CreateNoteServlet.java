@@ -4,6 +4,7 @@ import ucl.ac.uk.model.Model;
 import ucl.ac.uk.model.ModelFactory;
 import ucl.ac.uk.model.NoteIndex;
 import ucl.ac.uk.model.note.BasicNote;
+import ucl.ac.uk.model.note.UrlNote;
 
 import java.io.*;
 import javax.servlet.*;
@@ -19,8 +20,17 @@ public class CreateNoteServlet extends HttpServlet {
 
         Model model = ModelFactory.getModel();
         NoteIndex index = model.getIndex();
-        BasicNote basicnote = new BasicNote(request.getParameter("label"), request.getParameter("text"));
-        index.add(basicnote);
+
+        // Instantiate different note type based on the type parameter
+        String noteType = (String) request.getParameter("type");
+        if (noteType.equals("basic")) {
+            BasicNote basicnote = new BasicNote(request.getParameter("label"), request.getParameter("text"));
+            index.add(basicnote);
+        }
+        if (noteType.equals("url")) {
+            UrlNote urlNote = new UrlNote(request.getParameter("label"), request.getParameter("url"));
+            index.add(urlNote);
+        }
         // Then forward to JSP.
         ServletContext context = getServletContext();
         request.setAttribute("msg", "Note created");

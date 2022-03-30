@@ -6,14 +6,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 @WebServlet("/newnote.html")
-public class NewNoteServlet extends HttpServlet
-{
+public class NewNoteServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException
-    {
-        // Code to use the model to process something would go here.
+            throws IOException, ServletException {
+        // Get the note type so the forms can be rendered differently
+        String noteType = request.getParameter("type");
 
+        // Forward note type to servlet for creating notes
+        request.setAttribute("type", noteType);
         // Then forward to JSP.
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/createnote.jsp");

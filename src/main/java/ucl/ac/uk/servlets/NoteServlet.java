@@ -19,6 +19,7 @@ public class NoteServlet extends HttpServlet {
         NoteIndex index = model.getIndex();
         String key = request.getParameter("key");
 
+
         // Then forward to JSP.
         request.setAttribute("note", index.get(Integer.valueOf(key)));
         request.setAttribute("key", key);
