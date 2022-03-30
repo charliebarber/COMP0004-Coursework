@@ -24,19 +24,14 @@
             View mode - <%=request.getAttribute("viewmode")%>
         </h4>
         <a href="/index.html?viewmode=orderAdded" class="buttonlink view">Order added</a>
-        <a href="/index.html?viewmode=sorted" class="buttonlink view">Sorted order</a>
+        <a href="/index.html?viewmode=sorted" class="buttonlink view">Alphabetical sort</a>
     </div>
 
     <div>
         <h2>Your notes</h2>
         <ul>
-            <%--            <%--%>
-            <%--                HashMap<Integer, Note> notes = (HashMap<Integer, Note>) request.getAttribute("notes");--%>
-            <%--                notes.forEach((id, note) ->);--%>
-            <%--            %>--%>
-            <%--            <% HashMap<Integer, Note> notes = (HashMap<Integer, Note>) request.getAttribute("notes"); %>--%>
-            <c:forEach var="note" items="${notes}">
-                <li class="notelink"><a href="/note.html?key=${note.key}">${note.value}</a></li>
+            <c:forEach var="node" items="${notes}">
+                <li class="notelink"><a href="/note.html?key=${node.key}">${node.note.label}</a></li>
             </c:forEach>
         </ul>
     </div>

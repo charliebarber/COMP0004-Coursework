@@ -3,6 +3,7 @@ package ucl.ac.uk.model;
 import ucl.ac.uk.model.note.Note;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class NoteIndex {
@@ -30,7 +31,7 @@ public class NoteIndex {
         Note note = index.get(key);
         note.setContent(contents);
     }
-    
+
     public void updateLabel(Integer key, String label) {
         Note note = index.get(key);
         note.setLabel(label);
@@ -40,10 +41,20 @@ public class NoteIndex {
         return this.count;
     }
 
-    public HashMap<Integer, String> getLabelIndex() {
-        HashMap<Integer, String> labelIndex = new HashMap<>();
-        this.index.forEach((key, val) -> labelIndex.put(key, val.getLabel()));
+    public ArrayList<IndexNode> getLabelIndex() {
+//        HashMap<Integer, String> labelIndex = new HashMap<>();
+//        this.index.forEach((key, val) -> labelIndex.put(key, val.getLabel()));
+//        return labelIndex;
+        ArrayList<IndexNode> labelIndex = new ArrayList<>();
+        this.index.forEach((key, note) -> labelIndex.add(new IndexNode(key, note)));
         return labelIndex;
+    }
+
+    public ArrayList<IndexNode> getSortedIndex() {
+        ArrayList<IndexNode> sortedIndex = new ArrayList<>();
+        this.index.forEach((key, note) -> sortedIndex.add(new IndexNode(key, note)));
+        Collections.sort(sortedIndex);
+        return sortedIndex;
     }
 
     //    public HashMap<Integer, String> getStringIndex() {

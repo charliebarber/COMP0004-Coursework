@@ -1,12 +1,13 @@
 ucl/ac/uk/servlets/DeleteNoteServlet.class
-ucl/ac/uk/servlets/NewNoteServlet.class
 ucl/ac/uk/servlets/HomeServlet.class
 ucl/ac/uk/model/Model.class
+ucl/ac/uk/servlets/CreateNoteServlet.class
+ucl/ac/uk/model/IndexNode.class
+ucl/ac/uk/servlets/NewNoteServlet.class
 ucl/ac/uk/model/ModelFactory.class
 ucl/ac/uk/model/note/BasicNote.class
 ucl/ac/uk/main/Main.class
 ucl/ac/uk/servlets/NoteServlet.class
-ucl/ac/uk/servlets/CreateNoteServlet.class
 ucl/ac/uk/model/note/Note.class
 ucl/ac/uk/model/NoteIndex.class
 ucl/ac/uk/servlets/EditNoteServlet.class

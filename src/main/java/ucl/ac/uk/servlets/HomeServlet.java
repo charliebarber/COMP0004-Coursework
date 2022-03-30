@@ -14,7 +14,7 @@ public class HomeServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        // Code to use the model to process something would go here.
+        // Process the model
         Model model = ModelFactory.getModel();
         NoteIndex noteindex = model.getIndex();
 
@@ -25,12 +25,15 @@ public class HomeServlet extends HttpServlet {
         }
 
         // Then forward to JSP.
-        request.setAttribute("notes", noteindex.getLabelIndex());
+
+
         if (viewMode.equals("orderAdded")) {
             request.setAttribute("viewmode", "Order added");
+            request.setAttribute("notes", noteindex.getLabelIndex());
         }
         if (viewMode.equals("sorted")) {
-            request.setAttribute("viewmode", "Sorted order");
+            request.setAttribute("viewmode", "Alphabetical sorted order");
+            request.setAttribute("notes", noteindex.getSortedIndex());
         }
 
         ServletContext context = getServletContext();
